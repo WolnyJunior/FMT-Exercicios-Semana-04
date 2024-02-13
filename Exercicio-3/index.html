@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+
+    <h1 id="saudacao"></h1>
+
+
+    <h3>Cálculo de Média de Notas.</h3>
+    <p id="media"></p>
+
+    <script>
+
+        let nome = prompt("Digite seu nome: ")
+        let nomeAluno = prompt("Digite o nome do aluno para calcular a média.")
+        let nota1 = Number(prompt("Digite a primeira nota:"))
+        let nota2 = Number(prompt("Digite a segunda nota:"))
+        let nota3 = Number(prompt("Digite a terceira nota:"))
+        let nota4 = Number(prompt("Digite a quarta nota:"))
+
+
+        function saudacao() {
+            const d = new Date();
+            let hora = d.getHours();
+
+            if (hora > 6 && hora < 12) {
+                document.getElementById("saudacao").innerHTML = `Olá ${nome}, Bom Dia!`
+            } else if (hora >= 12 && hora < 18) {
+                document.getElementById("saudacao").innerHTML = `Olá ${nome}, Boa Tarde!`
+            } else if (hora >= 18 && hora < 23) {
+                document.getElementById("saudacao").innerHTML = `Olá ${nome}, Boa Noite!`
+            } else {
+                document.getElementById("saudacao").innerHTML = `Olá ${nome}, Isso não é hora de estar trabalhando, vá descansar!`
+            }
+        }
+
+        saudacao();
+
+
+        let media = (n1, n2, n3, n4) => (nota1 + nota2 + nota3 + nota4) / 4;
+        document.getElementById("media").innerHTML = `A média das notas do ${nomeAluno} é = ` + media()
+
+        console.log(media)
+        
+    </script>
+
+</body>
+
+</html>
