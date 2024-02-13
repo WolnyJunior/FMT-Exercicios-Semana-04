@@ -11,5 +11,5 @@ function adicao(){
 function anonima(){
     adicao();
 }
-
+    
 anonima()
