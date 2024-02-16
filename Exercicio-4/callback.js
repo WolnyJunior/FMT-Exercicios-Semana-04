@@ -8,6 +8,6 @@ function adicao(){
     console.log("O resultado da soma é =", soma)
 }
 
-const functionAnonima = adicao()
+const functionAnonima = function(){}
     
-functionAnonima()
+functionAnonima(adicao())
