@@ -1,5 +1,5 @@
 const prompt = require("prompt-sync")();
-
+//att ex-5
 // let ruim = nota < 7
 // let bom = nota > 7 && nota < 9
 // let otimo = nota >= 9
