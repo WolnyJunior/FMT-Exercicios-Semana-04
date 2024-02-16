@@ -16,17 +16,15 @@ const prompt = require("prompt-sync")();
     //         break;
     //     default:
     // }
-    
-    
-    let usuario = prompt("Digite seu nome:")
-    
-    let cont = 5;
-    
-    // let nota = Number(prompt("Como você classifica a série Stranger Things? \n1 = ÓTIMO \n2 = BOM \n3 = RUIM"));
+     
+//     let usuario = prompt("Digite seu nome:")
+//     let cont = 5;
+//     let nota = Number(prompt("Como você classifica a série Stranger Things? \n1 = ÓTIMO \n2 = BOM \n3 = RUIM"));
+// while (usuario < cont) {
+//     let user = usuario + cont
+//     console.log(user)
+// }
 
-while (usuario < cont) {
+let user = prompt('Digite seu nome:')
 
-    let user = usuario + cont
-    console.log(user)
 
-}
