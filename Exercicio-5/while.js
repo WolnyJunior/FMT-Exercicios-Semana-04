@@ -25,6 +25,6 @@ const prompt = require("prompt-sync")();
 //     console.log(user)
 // }
 
-let user = prompt('Digite seu nome:')
+// let user = prompt('Digite seu nome:')
 
 
