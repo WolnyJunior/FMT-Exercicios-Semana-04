@@ -9,44 +9,59 @@ do {
 
     let compras = Number(prompt('De qual setor gostaria de comprar? \n1 - Hortifruti\n2 - Laticínios\n3 - Carnes\n4 - Peixes\n5 - Aves\n6 - Sair'))
 
-
     switch (compras) {
         case 1:
-            qntHorti = Number(prompt("Quantos itens deseja comprar?"))
-            console.log('Você escolheu Hortifruti: Quantidade: ' + qntHorti)
+            opcaoHortifruti = Number(prompt("Quantos itens deseja comprar?"))
+            console.log('Você escolheu Hortifruti: Quantidade: ' + opcaoHortifruti)
             break
         case 2:
-            qntLaticinios = Number(prompt("Quantos itens deseja comprar?"))
-            console.log('Você escolheu Laticínios: Quantidade ' + qntLaticinios)
+            opcaoLaticinios = Number(prompt("Quantos itens deseja comprar?"))
+            console.log('Você escolheu Laticínios: Quantidade ' + opcaoLaticinios)
             break
         case 3:
-            qntCarne = Number(prompt("Quantos itens deseja comprar?"))
-            console.log('Você escolheu Carnes: Quantidade: ' + qntCarne)
+            opcaoCarne = Number(prompt("Quantos itens deseja comprar?"))
+            console.log('Você escolheu Carnes: Quantidade: ' + opcaoCarne)
             break
         case 4:
-            qntPeixes = Number(prompt("Quantos itens deseja comprar?"))
-            console.log('Você escolheu Peixes: Quantidade: ' + qntPeixes)
+            opcaoPeixes = Number(prompt("Quantos itens deseja comprar?"))
+            console.log('Você escolheu Peixes: Quantidade: ' + opcaoPeixes)
             break
         case 5:
-            qntAves = Number(prompt("Quantos itens deseja comprar?"))
-            console.log('Você escolheu Aves: Quantidade: ' + qntAves)
+            opcaoAves = Number(prompt("Quantos itens deseja comprar?"))
+            console.log('Você escolheu Aves: Quantidade: ' + opcaoAves)
             break
         case 6:
             opcaoSair = confirm("Deseja continuar suas compras?")
-            console.log(qntHorti)
-            console.log(qntLaticinios)
-            console.log(qntCarne)
-            console.log(qntPeixes)
-            console.log(qntAves)
-            console.log("Compras finalizadas.")
+
+            document.getElementById("item").innerHTML = Math.max(opcaoHortifruti, opcaoLaticinios, opcaoCarne, opcaoPeixes, opcaoAves)
+
+            console.log('Quantidade do item mais comprado: ' + Math.max(opcaoHortifruti, opcaoLaticinios, opcaoCarne, opcaoPeixes, opcaoAves))
+
+                if (Math.max = opcaoHortifruti) {
+                    setor = 'teste1'
+                } else if (Math.max = opcaoLaticinios) {
+                    setor = 'teste2'
+                } else if (Math.max = opcaoCarne) {
+                    setor = 'teste3'
+                } else if (Math.max = opcaoPeixes) {
+                    setor = 'teste4'
+                } else if (Math.max = opcaoAves) {
+                    setor = 'teste5'
+                    console.log(setor)
+                }
+
+            document.getElementById("setor").innerHTML = setor
+
+            console.log('O item mais comprado foi do setor ' + setor)
             break
         default:
             console.log('Opção Inválida')
             break
     }
 
-
 } while (opcaoSair == true) {
 
+    console.log("Compras finalizadas.")
     console.log('Obrigado, Volte Sempre!')
+    document.getElementById("finalizar").innerHTML = 'Compras finalizadas.\nObrigado, Volte Sempre!'
 }
